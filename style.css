@@ -1,0 +1,135 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+.container {
+    background: white;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+h1 {
+    text-align: center;
+    color: #243b55;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: gray;
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #243b55;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #243b55;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    background: #243b55;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #141e30;
+}
+
+.receipt {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f5f6fa;
+    border-radius: 10px;
+}
+
+.receipt h2 {
+    text-align: center;
+}
+
+.product {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    gap: 10px;
+}
+
+.product span:last-child {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.line {
+    border-top: 2px dashed #243b55;
+    margin: 15px 0;
+}
+
+.receipt h3 {
+    display: flex;
+    justify-content: space-between;
+    color: #243b55;
+    font-size: 18px;
+    gap: 10px;
+}
+
+.clear {
+    margin-top: 20px;
+    background: #dc3545;
+}
+
+.clear:hover {
+    background: #a71d2a;
+}
+
+#error {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.empty {
+    text-align: center;
+    color: gray;
+}
