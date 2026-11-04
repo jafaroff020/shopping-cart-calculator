@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Pacifico&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,130 +8,187 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #141e30, #243b55);
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, #ffe0ef, #fff0f6, #ffd6e8);
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 30px 15px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "🌸";
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    font-size: 65px;
+    opacity: 0.5;
+}
+
+body::after {
+    content: "🎀";
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    font-size: 65px;
+    opacity: 0.6;
 }
 
 .container {
-    background: white;
+    background: rgba(255,255,255,0.9);
     width: 100%;
     max-width: 500px;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    padding: 35px;
+    border-radius: 30px;
+    border: 3px solid #ffc1dc;
+    box-shadow: 0 15px 40px rgba(255,105,160,0.2);
+    position: relative;
 }
 
 h1 {
+    font-family: 'Pacifico', cursive;
     text-align: center;
-    color: #243b55;
+    color: #ed69a5;
+    font-size: 32px;
     margin-bottom: 10px;
 }
 
 .subtitle {
     text-align: center;
-    color: gray;
+    color: #d78aaa;
     margin-bottom: 30px;
+    font-weight: 600;
 }
 
 h2 {
+    color: #e779aa;
+    text-align: center;
     margin-bottom: 20px;
-    color: #243b55;
 }
 
 label {
     display: block;
-    margin-bottom: 7px;
-    font-weight: bold;
+    color: #c75c91;
+    font-weight: 700;
+    margin-bottom: 8px;
 }
 
 input {
     width: 100%;
-    padding: 12px;
+    padding: 14px;
     margin-bottom: 18px;
-    border: 1px solid #ccc;
-    border-radius: 7px;
+    border: 2px solid #ffd0e3;
+    border-radius: 15px;
+    background: #fff7fa;
+    font-family: 'Quicksand', sans-serif;
     font-size: 15px;
+    color: #b84d83;
+    outline: none;
+    transition: 0.3s;
 }
 
 input:focus {
-    outline: none;
-    border-color: #243b55;
+    border-color: #ed83b3;
+    box-shadow: 0 0 10px #ffc1dc;
+}
+
+input::placeholder {
+    color: #d9a0ba;
 }
 
 button {
     width: 100%;
-    padding: 13px;
-    background: #243b55;
+    padding: 14px;
+    background: linear-gradient(135deg, #ff9ec7, #ed6da7);
     color: white;
     border: none;
-    border-radius: 7px;
+    border-radius: 18px;
     font-size: 16px;
+    font-weight: 700;
+    font-family: 'Quicksand', sans-serif;
     cursor: pointer;
+    box-shadow: 0 5px 15px rgba(237,109,167,0.3);
     transition: 0.3s;
 }
 
 button:hover {
-    background: #141e30;
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #f77eb4, #df5596);
+    box-shadow: 0 8px 20px rgba(237,109,167,0.4);
 }
 
 .receipt {
     margin-top: 30px;
-    padding: 20px;
-    background: #f5f6fa;
-    border-radius: 10px;
+    padding: 22px;
+    background: #fff1f7;
+    border: 2px dashed #f5a9ca;
+    border-radius: 22px;
 }
 
 .receipt h2 {
-    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 23px;
 }
 
 .product {
     display: flex;
     justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
     gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid #f8c8dc;
+    color: #bd638d;
+    font-weight: 600;
 }
 
 .product span:last-child {
-    font-weight: bold;
+    color: #e36b9e;
     white-space: nowrap;
 }
 
 .line {
-    border-top: 2px dashed #243b55;
-    margin: 15px 0;
+    border-top: 2px dashed #ed9fc1;
+    margin: 18px 0;
 }
 
 .receipt h3 {
     display: flex;
     justify-content: space-between;
-    color: #243b55;
-    font-size: 18px;
     gap: 10px;
+    color: #d85e98;
+    font-size: 18px;
 }
 
 .clear {
     margin-top: 20px;
-    background: #dc3545;
+    background: #f5a2c4;
 }
 
 .clear:hover {
-    background: #a71d2a;
+    background: #e879a9;
 }
 
 #error {
-    color: red;
-    margin-top: 10px;
-    font-size: 14px;
+    color: #e04482;
+    margin-top: 12px;
+    font-weight: 600;
+    text-align: center;
 }
 
 .empty {
     text-align: center;
-    color: gray;
+    color: #d99ab7;
+    padding: 10px;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 23px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
 }
